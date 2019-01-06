@@ -1,0 +1,93 @@
+# List all the branches
+git branch
+
+cat .git/HEAD
+ls -la  .git/refs/heads
+cat  .git/refs/heads/master
+
+# Create new branch
+# git branch <branch>
+
+git branch new_feature
+git branch
+
+cat .git/HEAD
+ls -la  .git/refs/heads
+cat  .git/refs/heads/new_feature
+cat  .git/refs/heads/master
+
+# Switch branch
+git checkout <branch>
+
+cat ../.git/HEAD
+cat  ../.git/refs/heads/new_feature
+cat  ../.git/refs/heads/master
+
+# Demo
+git branch new_feature
+git checkout new_feature
+# make some changes to user1 file
+git add -A 
+git commit -m "some changes to user1 on new feature"
+git log --oneline
+
+git checkout master
+git log --oneline
+# user1 file revert back before changes
+
+git checkout new_feature
+git log --oneline
+# user1 file show the changes again
+
+# Exercise
+git branch new_feature
+git checkout new_feature
+# make some changes to user1-2 file
+git add -A 
+git commit -m "some changes to user1-2 on new feature"
+git log --oneline
+git checkout master
+git log --oneline
+# user1-2 file revert back before changes
+git checkout new_feature
+git log --oneline
+# user1-2 file show the changes again
+
+# Compare the git differences
+git diff master..new_feature
+
+# Rename a branch
+#git branch -m <branch>
+
+git delete -d new_feature3
+git branch
+
+# Delete a branch
+# git branch -d <branch>
+
+git branch -d new_feature3
+git branch
+
+# Force delete a branch
+git branch -D <branch>
+
+# Git merge to master
+git merge new_feature
+
+# Exercise
+git branch -b new_feature4
+#modify user1 file
+git add -A 
+git commit -m "modify user1 on new_feature4"
+git checkout master
+git diff master..new_feature4
+git merge new_feature4
+
+# Exercise - Merge Conflit
+git checkout master
+# make some changes to file user1-2 and commit the changes
+git checkout new_feature
+# make some changes to file user1-2 and commit the changes
+git checkout master
+git merge new_feature
+# Accept both changs
