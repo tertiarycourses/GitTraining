@@ -1,0 +1,13 @@
+# Init a Git
+git init
+
+
+# Git Add and Commit
+v0: This is a new file from user 1
+git add -A 
+git commit -m "init commit"
+
+v1: Make some changes to user 1
+git add -A 
+git commit -m "init commit"
+
