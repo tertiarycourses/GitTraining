@@ -1,0 +1,27 @@
+# Init a Git
+git init
+ls -la
+
+# Git Add and Commit
+# v0: This is a new file from user 1
+git add -A 
+git commit -m "init commit"
+
+# v1: Make some changes to user 1
+git add -A 
+git commit -m "modify user1 v1"
+git log --oneline
+
+# v2: Make some changes to user 1
+git add -A 
+git commit -m "modify user1 v2"
+git log --oneline
+
+# Ex
+# Create a new file user1-2
+git add -A 
+git commit -m "add user1-2 file"
+# Remae user1-2 to user1-2a
+git add -A 
+git commit -m "add user1-2 file"
+git log --oneline
