@@ -4,9 +4,4 @@ v2: Make some more changes to user 1
 v3: Make some changes to user 1 on new feature branch
 v4: Make some more changes to user 1 on new feature branch
 v5: Make some more changes to user 1 on new feature branch
-<<<<<<< HEAD
-v7: Modify user1 on master branch
-=======
-v6: Modify changes on user 1 on new feature branch
-v8: Modify user1 v8
->>>>>>> new_feature
+v6: user2 make some changes
